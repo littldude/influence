@@ -13,25 +13,371 @@ h1,h2,h3,h4,h5,h6 {
     padding: 0;
 }
 
+a {
+    text-decoration: none;
+}
 .container {
+    position: relative;
     margin: 0 auto;
     max-width: 1140px;
     width: 100%;
 }
 
+.intro {
+    overflow: hidden;
+    z-index: 100;
+    position: relative;
+    padding: 223px 0 167px 0;
+    background-image: url("../img/bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    &__text {
+        z-index: 1000;
+        position: relative;
+    }
+    &__logo {
+        display: block;
+        width: 192px;
+        height: 40px;
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    &__img {
+        position: absolute;
+        right: -8%;
+        top: 9%;
+        display: block;
+        width: 100%;
+        height: 120%;
+        svg {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.title {
+    font-family: 'Gilroy';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 80px;
+    line-height: 100px;
+    color: #4E3658; 
+    &-intro {
+        margin-top: 22px;
+        width: 400px;
+        position: relative;
+        &::after {
+            position: absolute;
+            top: -9px;
+            right: 20px;
+            content: url("../img/heart.svg");
+            display: block;
+            width: 26px;
+            height: 23px;
+        }
+    }
+    &-whywe {
+        padding: 0 20%;
+        margin-bottom: 58px;
+        &-last {
+            text-align: center;
+            padding: 0 15%;
+            margin-bottom: 0;
+            margin-top: 58px;
+        }
+    }
+    &-pros {
+        text-align: center;
+        padding: 0 190px;
+    }
+}
+.subtitle {
+    font-family: 'ProximaNova';
+    font-style: normal;
+    font-size: 32px;
+    line-height: 39px;
+    color: #4E3658;
+    &-thin {
+        margin-top: 53px;
+        font-weight: 400;
+    }
+    &-intro {
+        width: 491px;
+        margin: 29px 0 89px 0;
+        font-weight: 700;
+    }
+    &-whywe {
+        text-align: center;
+        margin-bottom: 82px;
+    }
+}
+.button {
+    display: block;
+    width: 365px;
+    height: 103px;
+    background: #FF8095;
+    box-shadow: 3px 3px 10px rgba(255, 128, 149, 0.6);
+    text-align: center;
+    padding: 28px 0 28px 0;
+    font-family: 'FuturaPT';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 46px;
+    color: #FFFFFF;
+    &:hover {
+        background: #FF6F86;
+        box-shadow: 3px 3px 10px rgba(255, 128, 149, 0.6);
+        transition: .2s linear;
+    }
+}
+
+.whywe {
+    padding: 90px 0 160px 0;
+    background-color: #ffffff; 
+    background-image: url('../img/vector.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    &__inner {
+        background-color: #ffffff;
+        padding: 76px 97px 124px 193px;
+        border: 1px solid rgba(78, 54, 88, 0.3);
+        box-shadow: 5px 5px 10px rgba(78, 54, 88, 0.3);
+        border-radius: 45px;
+    }
+    &__text {
+        margin-bottom: 75px;
+        font-family: 'ProximaNova';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 36px;
+        color: #4E3658;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.video {
+    padding: 147px 0 215px 0;
+    background-color: #E4E4FF;
+    &__inner {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #ffffff;
+        padding: 118px 97px 119px 97px;
+        border: 1px solid rgba(78, 54, 88, 0.3);
+        box-sizing: border-box;
+        box-shadow: 5px 5px 10px rgba(78, 54, 88, 0.3);
+        border-radius: 45px;
+        &--text {
+            width: 42%;
+        }
+    }
+    &__thin {
+        display: block;
+        margin-top: 30px;
+        font-family: 'ProximaNova';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 28px;
+        line-height: 34px;
+        color: #4E3658;
+    }
+    &__img {
+        position: relative;
+    }
+    &__play {
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%);
+        display: block;
+        width: 106px;
+        height: 106px;
+        svg {
+            display: block;
+            width: 100%;
+            height: 100%;
+            fill: #FF8095;
+            &:hover {
+                fill: #FF6F86;
+                transition: .2s linear;
+            }
+        }
+    }
+    &__text {
+        padding: 140px 97px 0 97px;
+        font-family: 'Gilroy';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 40px;
+        line-height: 50px;
+        text-align: center;
+        color: #4E3658;
+    }
+    .heart {
+        position: absolute;
+        svg {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+        &-pink {
+            top: 39px;
+            right: 25px;
+            display: block;
+            width: 59px;
+            height: 55px;
+        }
+        &-dark {
+            top: -106px;
+            right: 214px;
+            display: block;
+            width: 56px;
+            height: 52px;
+            
+        }
+        &-yellow {
+            left: 87px;
+            bottom: -100px;
+            display: block;
+            width: 91px;
+            height: 87px;
+        }
+    }
+}
+
+.pros {
+    padding: 104px 0 120px 0;
+    &__inner {
+        padding: 90px 0 49px 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        &--item {
+            margin-bottom: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 72px 30px;
+            width: 367px;
+            height: 350px;
+            background-color: #ffffff;
+            border: 1px solid rgba(78, 54, 88, 0.3);
+            box-sizing: border-box;
+            box-shadow: 5px 5px 10px rgba(78, 54, 88, 0.3);
+            border-radius: 45px;
+            &:hover {
+                background: #E4E4FF;
+                border: 1px solid rgba(78, 54, 88, 0.3);
+                transform: translate3d(-7px, -12px, 7px);
+                transition: .2s linear;
+                cursor: pointer;
+            }
+            &__text {
+                margin: 0;
+                font-family: 'ProximaNova';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 28px;
+                line-height: 34px;
+                text-align: center;
+                color: #4E3658;
+            }
+        }
+    }
+    &__img {
+        display: block;
+        margin: 0 auto;
+        width: 1042px;
+        height: 615px;
+        svg {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.autor {
+    background-color: #E4E4FF;
+    padding: 142px 0 164px 0;
+    &__inner {
+        width: 753px;
+        padding: 77px 95px 85px 98px;
+        background-color: #ffffff;
+        border: 1px solid rgba(78, 54, 88, 0.3);
+        box-sizing: border-box;
+        box-shadow: 5px 5px 10px rgba(78, 54, 88, 0.3);
+        border-radius: 45px;
+        &--text {
+            margin-bottom: 48px;
+            font-family: 'ProximaNova';
+            font-style: normal;
+            font-weight: normal;
+            font-size: 28px;
+            line-height: 34px;
+            color: #4E3658;
+        }
+    }
+    &__text {
+        margin-top: 75px;
+    }
+    &__title {
+        font-family: 'Gilroy';
+        font-style: normal;
+        font-weight: 900;
+        font-size: 60px;
+        line-height: 75px;
+        color: #4E3658;
+    }
+    &__subtitle {
+        margin-top: 34px;
+        font-family: 'ProximaNova';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 39px;
+        color: #4E3658;
+        &::after {
+            margin-top: 42px;
+            content: "";
+            display: block;
+            width: 230px;
+            height: 3px;
+            background-color: #FAC36A;
+        }
+    }
+}
+
 /*FONTS*/
 @font-face {
-    font-family: 'ProximaNovs'; 
+    font-family: 'ProximaNova'; 
     src: url("../fonts/ProximaNova-Regular.ttf");
     font-weight: 400;
 }
 @font-face {
     font-family: 'ProximaNova'; 
-    src: url("..//fonts/ProximaNova-Bold.ttf");
+    src: url("../fonts/ProximaNova-Bold.ttf");
     font-weight: 700;
 }
 @font-face {
+    font-family: 'FuturaPT'; 
+    src: url('../fonts/FuturaPT-Book.ttf');
+    font-weight: 400;
+}
+@font-face {
     font-family: 'Gilroy'; 
-    src: url(../fonts/gilroy-black.ttf);
+    src: url('../fonts/gilroy-black.ttf');
     font-weight: 900;
 }
