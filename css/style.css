@@ -85,6 +85,7 @@ a {
 }
 .title-whywe {
   padding: 0 20%;
+  text-align: center;
   margin-bottom: 58px;
 }
 .title-whywe-last {
@@ -96,6 +97,21 @@ a {
 .title-pros {
   text-align: center;
   padding: 0 190px;
+}
+.title-autor {
+  text-align: center;
+  padding: 0 11%;
+}
+.title-review {
+  text-align: center;
+  margin-bottom: 65px;
+}
+.title-buy {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.title-footer {
+  text-align: center;
 }
 
 .subtitle {
@@ -118,6 +134,12 @@ a {
   text-align: center;
   margin-bottom: 82px;
 }
+.subtitle-review {
+  text-align: center;
+}
+.subtitle-buy {
+  text-align: center;
+}
 
 .button {
   display: block;
@@ -138,6 +160,18 @@ a {
   background: #FF6F86;
   box-shadow: 3px 3px 10px rgba(255, 128, 149, 0.6);
   transition: 0.2s linear;
+}
+.button-review {
+  margin: 12px auto 0 auto;
+  background: #FAC36A;
+  box-shadow: 3px 3px 10px rgba(250, 195, 106, 0.5);
+}
+.button-review:hover {
+  background: #FFB641;
+  transition: 0.2s linear;
+}
+.button-buy {
+  margin: 70px auto 58px auto;
 }
 
 .whywe {
@@ -312,8 +346,10 @@ a {
 }
 
 .autor {
+  position: relative;
   background-color: #E4E4FF;
   padding: 142px 0 164px 0;
+  z-index: 5;
 }
 .autor__inner {
   width: 753px;
@@ -326,12 +362,16 @@ a {
 }
 .autor__inner--text {
   margin-bottom: 48px;
+  margin-top: 0;
   font-family: "ProximaNova";
   font-style: normal;
   font-weight: normal;
   font-size: 28px;
   line-height: 34px;
   color: #4E3658;
+}
+.autor__inner--text:last-child {
+  margin-bottom: 0;
 }
 .autor__text {
   margin-top: 75px;
@@ -360,6 +400,232 @@ a {
   width: 230px;
   height: 3px;
   background-color: #FAC36A;
+}
+.autor__img {
+  position: absolute;
+  right: -154px;
+  bottom: -164px;
+  z-index: -1;
+  display: block;
+  width: 678px;
+  height: 920px;
+}
+
+.about {
+  padding: 120px 0;
+}
+.about__inner {
+  margin-top: 72px;
+  padding: 0 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.about__inner--item {
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #FAC36A;
+}
+.about__inner--item:last-child {
+  margin-bottom: 0;
+}
+.about__inner--item__img {
+  display: block;
+  margin-right: 15px;
+  width: 32px;
+  height: 32px;
+}
+.about__inner--item__img svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.about__inner--item__text {
+  margin: 0;
+  font-family: "ProximaNova";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 34px;
+  color: #4E3658;
+}
+
+.review {
+  background-color: #fff;
+}
+.review__inner {
+  margin-top: 102px;
+}
+.review__inner--item {
+  margin-bottom: 90px;
+  display: flex;
+  width: 80%;
+  align-items: flex-end;
+}
+.review__inner--item:first-child {
+  margin: 0 auto 90px auto;
+}
+.review__inner--item:last-child {
+  margin-left: auto;
+}
+.review__inner--item:nth-child(2) {
+  margin-right: auto;
+}
+.review__inner--item__text {
+  padding: 56px 75px 69px 97px;
+  background: #FFFFFF;
+  border: 1px solid rgba(78, 54, 88, 0.3);
+  box-sizing: border-box;
+  box-shadow: 5px 5px 10px rgba(78, 54, 88, 0.3);
+  border-radius: 45px;
+  font-family: "ProximaNova";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 34px;
+  color: #4E3658;
+}
+.review__person {
+  margin: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.review__person--img {
+  display: block;
+  width: 173px;
+  height: 171px;
+  border-radius: 100%;
+}
+.review__person--img img {
+  display: block;
+  object-fit: cover;
+}
+.review__person--name {
+  margin-top: 19px;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 40px;
+  color: #FAC36A;
+}
+
+.buy {
+  padding: 126px 0 110px 0;
+}
+.buy__inner {
+  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+}
+.buy__inner--price__last {
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 75px;
+  text-align: center;
+  -webkit-text-decoration-line: line-through;
+          text-decoration-line: line-through;
+  color: #4E3658;
+}
+.buy__inner--price__new {
+  margin: 40px 0 15px 0;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 120px;
+  line-height: 150px;
+  text-align: center;
+  color: #FAC36A;
+}
+.buy__inner--currency {
+  margin: 0 0 32px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Gilroy";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 60px;
+  line-height: 75px;
+  text-align: center;
+  color: #FAC36A;
+}
+.buy__inner--currency p {
+  margin: 0;
+  padding: 0 10px;
+}
+.buy__small {
+  margin: 0 auto;
+  text-align: left;
+  font-family: "ProximaNova";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 27px;
+  color: #4E3658;
+}
+.buy__small small {
+  margin-bottom: 15px;
+  display: block;
+}
+.buy__small--public {
+  color: #4E3658;
+  text-decoration: underline;
+}
+
+.footer {
+  padding-bottom: 120px;
+}
+.footer__inner {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer__inner--text {
+  font-family: "ProximaNova";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 39px;
+  text-align: center;
+  color: #4E3658;
+}
+.footer__inner--email {
+  font-family: "ProximaNova";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 39px;
+  text-align: center;
+  color: #FAC36A;
+  text-decoration: underline;
+}
+.footer__inner--email:hover {
+  color: #FFB641;
+  transition: 0.2s linear;
+}
+.footer__link {
+  margin: 60px auto 0 auto;
+  display: flex;
+  justify-content: space-between;
+  width: 550px;
+}
+.footer__link--item {
+  display: block;
+  width: 65px;
+  height: 65px;
+  fill: #FAC36A;
+}
+.footer__link--item svg {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 /*FONTS*/

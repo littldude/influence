@@ -83,6 +83,7 @@ a {
     }
     &-whywe {
         padding: 0 20%;
+        text-align: center;
         margin-bottom: 58px;
         &-last {
             text-align: center;
@@ -94,6 +95,21 @@ a {
     &-pros {
         text-align: center;
         padding: 0 190px;
+    }
+    &-autor {
+        text-align: center;
+        padding: 0 11%;
+    }
+    &-review {
+        text-align: center;
+        margin-bottom: 65px;
+    }
+    &-buy {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+    &-footer {
+        text-align: center;
     }
 }
 .subtitle {
@@ -115,6 +131,12 @@ a {
         text-align: center;
         margin-bottom: 82px;
     }
+    &-review {
+        text-align: center;
+    }
+    &-buy {
+        text-align: center;
+    }
 }
 .button {
     display: block;
@@ -134,6 +156,18 @@ a {
         background: #FF6F86;
         box-shadow: 3px 3px 10px rgba(255, 128, 149, 0.6);
         transition: .2s linear;
+    }
+    &-review {
+        margin: 12px auto 0 auto; 
+        background: #FAC36A;
+        box-shadow: 3px 3px 10px rgba(250, 195, 106, 0.5);
+        &:hover {
+            background: #FFB641;
+            transition: .2s linear;
+        }
+    }
+    &-buy {
+        margin: 70px auto 58px auto;
     }
 }
 
@@ -310,8 +344,10 @@ a {
 }
 
 .autor {
+    position: relative;
     background-color: #E4E4FF;
     padding: 142px 0 164px 0;
+    z-index: 5;
     &__inner {
         width: 753px;
         padding: 77px 95px 85px 98px;
@@ -322,12 +358,16 @@ a {
         border-radius: 45px;
         &--text {
             margin-bottom: 48px;
+            margin-top: 0;
             font-family: 'ProximaNova';
             font-style: normal;
             font-weight: normal;
             font-size: 28px;
             line-height: 34px;
             color: #4E3658;
+            &:last-child {
+                margin-bottom: 0;
+            }
         }
     }
     &__text {
@@ -358,8 +398,234 @@ a {
             background-color: #FAC36A;
         }
     }
+    &__img {
+        position: absolute;
+        right: -154px;
+        bottom: -164px;
+        z-index: -1;
+        display: block;
+        width: 678px;
+        height: 920px;
+    }
 }
 
+.about {
+    padding: 120px 0;
+    &__inner {
+        margin-top: 72px;
+        padding: 0 15%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &--item {
+            margin-bottom: 50px;
+            display: flex;
+            align-items: center;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #FAC36A;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            &__img {
+                display: block;
+                margin-right: 15px;
+                width: 32px;
+                height: 32px;
+                svg {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            &__text {
+                margin: 0;
+                font-family: 'ProximaNova';
+                font-style: normal;
+                font-weight: normal;
+                font-size: 28px;
+                line-height: 34px;
+                color: #4E3658;
+            }
+        }
+    }
+}
+
+.review {
+    background-color: #fff;
+    &__inner {
+        margin-top: 102px;
+        &--item {
+            margin-bottom: 90px;
+            display: flex;
+            width: 80%;
+            align-items: flex-end;
+            &:first-child {
+                margin: 0 auto 90px auto;
+            }
+            &:last-child {
+                margin-left: auto;
+            }
+            &:nth-child(2) {
+                margin-right: auto;
+            }
+            &__text {
+                padding: 56px 75px 69px 97px;
+                background: #FFFFFF;
+                border: 1px solid rgba(78, 54, 88, 0.3);
+                box-sizing: border-box;
+                box-shadow: 5px 5px 10px rgba(78, 54, 88, 0.3);
+                border-radius: 45px;
+                font-family: 'ProximaNova';
+                font-style: normal;
+                font-weight: normal;
+                font-size: 28px;
+                line-height: 34px;
+                color: #4E3658;
+            }
+        }
+    }
+    &__person {
+        margin: 0 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &--img {
+            display: block;
+            width: 173px;
+            height: 171px;
+            border-radius: 100%;
+            img {
+                display: block;
+                object-fit: cover;
+            }
+        }
+        &--name {
+            margin-top: 19px;
+            font-family: 'Gilroy';
+            font-style: normal;
+            font-weight: 900;
+            font-size: 32px;
+            line-height: 40px;
+            color: #FAC36A;
+        }
+    }
+}
+
+.buy {
+    padding: 126px 0 110px 0;
+    &__inner {
+        margin-top: 60px;
+        display: flex;
+        flex-direction: column;
+        &--price {
+            &__last {
+                font-family: 'Gilroy';
+                font-style: normal;
+                font-weight: 900;
+                font-size: 60px;
+                line-height: 75px;
+                text-align: center;
+                text-decoration-line: line-through;
+                color: #4E3658;
+            }
+            &__new {
+                margin: 40px 0 15px 0;
+                font-family: 'Gilroy';
+                font-style: normal;
+                font-weight: 900;
+                font-size: 120px;
+                line-height: 150px;
+                text-align: center;
+                color: #FAC36A
+            }
+        }
+        &--currency {
+            margin: 0 0 32px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Gilroy';
+            font-style: normal;
+            font-weight: 900;
+            font-size: 60px;
+            line-height: 75px;
+            text-align: center;
+            color: #FAC36A;
+            p {
+                margin: 0;
+                padding: 0 10px;
+            }
+        }
+    }
+    &__small {
+        margin: 0 auto;
+        text-align: left;
+        font-family: 'ProximaNova';
+        font-style: normal;
+        font-weight: normal;
+        font-size: 22px;
+        line-height: 27px;
+        color: #4E3658;
+        small {
+            margin-bottom: 15px;
+            display: block;
+        }
+        &--public {
+            color: #4E3658;
+            text-decoration: underline;
+        }
+    }
+}
+
+.footer {
+    padding-bottom: 120px;
+    &__inner {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        &--text {
+            font-family: 'ProximaNova';
+            font-style: normal;
+            font-weight: normal;
+            font-size: 32px;
+            line-height: 39px;
+            text-align: center;
+            color: #4E3658;
+        }
+        &--email {
+            font-family: 'ProximaNova';
+            font-style: normal;
+            font-weight: normal;
+            font-size: 32px;
+            line-height: 39px;
+            text-align: center;
+            color: #FAC36A;
+            text-decoration: underline;
+            &:hover {
+                color: #FFB641;
+                transition: .2s linear;
+            }
+        }
+    }
+    &__link {
+        margin: 60px auto 0 auto;
+        display: flex;
+        justify-content: space-between;
+        width: 550px;
+        &--item {
+            display: block;
+            width: 65px;
+            height: 65px;
+            fill: #FAC36A;
+            svg {
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}
 /*FONTS*/
 @font-face {
     font-family: 'ProximaNova'; 
