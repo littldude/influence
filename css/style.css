@@ -656,24 +656,69 @@ a {
   height: 100%;
 }
 
+@media (max-width: 1366px) {
+  .title {
+    font-size: 72px;
+    line-height: 86px;
+  }
+  .title-intro::after {
+    top: -6px;
+    right: 57px;
+  }
+
+  .subtitle {
+    font-size: 28px;
+  }
+
+  .intro__img {
+    width: 100%;
+    height: 100%;
+  }
+
+  .whywe__text {
+    font-size: 24px;
+  }
+
+  .pros__inner--item__text {
+    font-size: 24px;
+  }
+
+  .autor__inner--text {
+    font-size: 24px;
+  }
+  .autor__title {
+    font-size: 56px;
+  }
+  .autor__subtitle {
+    font-size: 28px;
+  }
+  .autor__subtitle::after {
+    width: 203px;
+  }
+  .autor__text {
+    margin-top: 65px;
+  }
+}
 @media (max-width: 1112px) {
   .container {
     padding: 0 1%;
   }
 
   .title {
-    font-size: 72px;
+    font-size: 64px;
+    line-height: 77px;
   }
   .title-intro::after {
-    top: -7px;
-    right: 57px;
+    top: -4px;
+    right: 93px;
   }
   .title-autor {
     padding: 0;
   }
 
   .subtitle {
-    font-size: 24px;
+    font-size: 22px;
+    line-height: 26px;
   }
 
   .button {
@@ -682,6 +727,9 @@ a {
     padding: 25px 0;
   }
 
+  .intro {
+    padding: 130px 0 167px 0;
+  }
   .intro__img {
     right: -1%;
     top: 9%;
