@@ -5,6 +5,10 @@
           box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
 }
@@ -643,7 +647,13 @@ a {
 }
 .buy__inner--currency p {
   margin: 0;
-  padding: 0 10px;
+}
+.buy__inner--currency p::after {
+  content: "/";
+  padding: 0 5px;
+}
+.buy__inner--currency p:last-child::after {
+  display: none;
 }
 .buy__small {
   margin: 0 auto;
@@ -863,6 +873,14 @@ a {
     display: block;
     width: 30px;
     height: 30px;
+  }
+
+  .pros__inner--item:hover {
+    background: #ffffff;
+    border: 1px solid rgba(78, 54, 88, 0.3);
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
   }
 
   .autor__inner {
@@ -1215,7 +1233,7 @@ a {
   }
   .pros__inner--item {
     margin-bottom: 30px;
-    width: 56%;
+    width: 80%;
   }
   .pros__inner--item:hover {
     -webkit-transform: none;

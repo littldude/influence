@@ -3,6 +3,9 @@
 ::before {
     box-sizing: border-box;
 }
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     margin: 0;
@@ -562,7 +565,15 @@ a {
             color: #FAC36A;
             p {
                 margin: 0;
-                padding: 0 10px;
+                &::after {
+                    content: '/';
+                    padding: 0 5px;
+                }
+                &:last-child {
+                    &::after {
+                        display: none;
+                    }
+                }
             }
         }
     }
@@ -777,6 +788,17 @@ a {
                 display: block;
                 width: 30px;
                 height: 30px;
+            }
+        }
+    }
+    .pros {
+        &__inner {
+            &--item {
+                &:hover {
+                    background: #ffffff;
+                    border: 1px solid rgba(78, 54, 88, 0.3);
+                    transform: none;
+                }
             }
         }
     }
@@ -1149,7 +1171,7 @@ a {
             justify-content: center;
             &--item {
                 margin-bottom: 30px;
-                width: 56%;
+                width: 80%;
                 &:hover {
                     transform: none;
                 }
