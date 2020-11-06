@@ -200,6 +200,15 @@ a {
         font-size: 28px;
         line-height: 36px;
         color: #4E3658;
+        display: flex;
+        align-items: center;
+        &::before {
+            content: url('../img/bubble.svg');
+            margin-right: 15px;
+            display: block;
+            width: 30px;
+            height: 30px;
+        }
         &:last-child {
             margin-bottom: 0;
         }
@@ -321,7 +330,8 @@ a {
             &:hover {
                 background: #E4E4FF;
                 border: 1px solid rgba(78, 54, 88, 0.3);
-                transform: translate3d(-7px, -12px, 7px);
+                // transform: translate3d(-7px, -12px, 7px);
+                transform: scale(1.05);
                 transition: .2s linear;
                 cursor: pointer;
             }
@@ -780,15 +790,6 @@ a {
     .whywe {
         &__text {
             margin-bottom: 50px;
-            display: flex;
-            align-items: center;
-            &::before {
-                content: url('../img/bubble.svg');
-                margin-right: 15px;
-                display: block;
-                width: 30px;
-                height: 30px;
-            }
         }
     }
     .pros {
