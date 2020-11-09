@@ -220,7 +220,7 @@ a {
 }
 
 .video {
-  padding: 147px 0 215px 0;
+  padding: 147px 0 150px 0;
   background-color: #E4E4FF;
 }
 .video__inner {
@@ -271,7 +271,7 @@ a {
   transition: 0.2s linear;
 }
 .video__text {
-  padding: 140px 97px 0 97px;
+  padding: 30px 97px 0 97px;
   font-family: "Gilroy";
   font-style: normal;
   font-weight: 900;
@@ -893,7 +893,7 @@ a {
     margin-top: 40px;
   }
   .video .heart-yellow {
-    bottom: 23%;
+    bottom: 0;
   }
   .video .heart-pink {
     top: 87%;
@@ -995,7 +995,7 @@ a {
     text-align: center;
   }
   .video .heart-yellow {
-    bottom: 27%;
+    bottom: 38%;
   }
 
   .footer__inner--text {
@@ -1272,7 +1272,7 @@ a {
   .video .heart-yellow {
     width: 41px;
     height: 40px;
-    bottom: 48%;
+    bottom: 42%;
   }
   .video__text {
     padding: 35px 0 0 0;

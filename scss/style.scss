@@ -216,7 +216,7 @@ a {
 }
 
 .video {
-    padding: 147px 0 215px 0;
+    padding: 147px 0 150px 0;
     background-color: #E4E4FF;
     &__inner {
         position: relative;
@@ -266,7 +266,7 @@ a {
         }
     }
     &__text {
-        padding: 140px 97px 0 97px;
+        padding: 30px 97px 0 97px;
         font-family: 'Gilroy';
         font-style: normal;
         font-weight: 900;
@@ -934,7 +934,7 @@ a {
         }
         .heart {
             &-yellow {
-                bottom: 23%;
+                bottom: 0;
             }
             &-pink {
                 top: 87%;
@@ -1051,7 +1051,7 @@ a {
         }
         .heart {
             &-yellow {
-                bottom: 27%;
+                bottom: 38%;
             }
         }
     }
@@ -1347,7 +1347,7 @@ a {
             &-yellow {
                 width: 41px;
                 height: 40px;
-                bottom: 48%;
+                bottom: 42%;
             }
         }
         &__text {
