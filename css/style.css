@@ -28,6 +28,29 @@ a {
   width: 100%;
 }
 
+.text__new {
+  margin-top: 20px;
+  display: block;
+  width: 490px;
+  color: #ffffff;
+  font-family: "ProximaNova";
+  font-style: normal;
+  font-weight: 700;
+  background-color: #FF6F86;
+  padding: 1px 3px;
+}
+.text__new--buy {
+  padding: 0;
+  width: 390px;
+  text-align: center;
+  margin: 10px auto 0 auto;
+  font-family: "ProximaNova";
+  font-style: normal;
+  font-size: 24px;
+  line-height: 27px;
+  font-weight: 700;
+}
+
 .intro {
   overflow: hidden;
   z-index: 100;
@@ -777,6 +800,10 @@ a {
   }
 }
 @media (max-width: 991px) {
+  .text__new {
+    margin: 20px auto 0 auto;
+  }
+
   .title {
     font-size: 64px;
   }
@@ -1151,6 +1178,14 @@ a {
   }
 }
 @media (max-width: 568px) {
+  .text__new {
+    width: auto;
+  }
+  .text__new--buy {
+    font-size: 16px;
+    line-height: 21px;
+  }
+
   .pros__inner {
     display: flex;
     justify-content: center;

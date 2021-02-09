@@ -38,7 +38,7 @@
     <!-- END OPEN GRAPH CODE -->
     <title>Искусство влияния</title>
     <!-- Facebook Pixel Code -->
-<script>
+<!-- <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
     n.callMethod.apply(n,arguments):n.queue.push(arguments)};
@@ -53,7 +53,7 @@
     <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=1016908631673402&ev=PageView&noscript=1"
     />
-</noscript>
+</noscript> -->
 </head>
 <body>
     <section class="section intro">
@@ -66,11 +66,12 @@
                 <img src="img/logo.png" alt="Образовательный центр Вадима Куркина">
             </a>
             <!-- /.intro__logo -->
-            <div class="intro__text">
+            <div class="intro__text subtitle">
                 <h2 class="subtitle subtitle-thin">Онлайн-курс Вадима Куркина</h2>
                 <!-- /.subtitle -->
                 <h1 class="title title-intro">Искусство влияния</h1>
                 <!-- /.title -->
+                <span class="text__new">Только для участников курса "Основы стаильной самооценки"</span>
                 <h2 class="subtitle subtitle-intro">Всего за 7 видео-уроков вы научитесь получать от людей именно ту реакцию, которая вам нужна</h2>
                 <!-- /.subtitle -->
                 <a class="button button-intro" href="#buy">Купить курс</a>
@@ -123,7 +124,7 @@
                 <!-- /.video__inner-text -->
                 <div class="video__img">
                     <img src="img/video.png" alt="Видео с программой курса">
-                    <a class="video__play js-modal-btn" href="#" data-video-id="hyNuFOK-hGE">
+                    <a class="video__play js-modal-btn" href="#" data-video-id="_8Wfdx3-yt8">
                         <svg><use href="sprite.svg#video-yt"></use></svg>
                     </a>
                     <!-- /.video__play -->
@@ -428,9 +429,10 @@
             <!-- /.title -->
             <h3 class="subtitle subtitle-buy">Начните развивать свое мастерство влияния прямо сейчас!</h3>
             <!-- /.subtitle -->
+            <span class="text__new text__new--buy">Цена для участников курса "Основы стаильной самооценки"</span>
             <div class="buy__inner" id="buy">
                 <span class="buy__inner--price__last">2500 руб.</span>
-                <span class="buy__inner--price__new" id="price">1500 ₽</span>
+                <span class="buy__inner--price__new" id="price">900 ₽</span>
                 <div class="buy__inner--currency">
                     <p id="USD"></p><p id="EUR"></p><p id="UAH"></p>
                 </div>
@@ -489,15 +491,39 @@
     <!-- /.footer -->
 
     <script>
-        $.getJSON("https://www.cbr-xml-daily.ru/daily_json.js", function(data) {
-    
-            $('#USD').html((parseFloat($('#price').text()) / data.Valute.USD.Value.toFixed()).toFixed() +'$');
-            $('#EUR').html((parseFloat($('#price').text()) / data.Valute.EUR.Value.toFixed()).toFixed() + '€');
-            $('#UAH').html((parseFloat($('#price').text()) / data.Valute.UAH.Value.toFixed()).toFixed()+'₴');
-        });
-    </script>
-    <script>
         $(".js-modal-btn").modalVideo();
     </script>
+
+    <!-- <script>
+        $.getJSON("https://vadimkurkin.com/prices.json", function(data) {
+            $('#price').html(data['childhood'] + '₽');
+        });
+
+    </script> -->
+
+    <script>
+        $.getJSON("https://www.cbr-xml-daily.ru/daily_json.js", function(data) {
+            $('#USD').html((900 / data.Valute.USD.Value).toFixed() + '$');
+            $('#EUR').html((900 / data.Valute.EUR.Value).toFixed() + '€');
+            $('#UAH').html((900 / data.Valute.UAH.Value).toFixed() + '₴');
+        });
+    </script>
+
 </body>
 </html>
+
+
+
+<!-- <script>
+  $.getJSON("https://vadimkurkin.com/prices.json", function(data) {
+            $('#price').html(data['childhood'] + '₽')
+            .then($.getJSON("https://www.cbr-xml-daily.ru/daily_json.js", function(data) {
+
+                $price = parseFloat($('#price').text());
+                $('#USD').html(($price/ data.Valute.USD.Value).toFixed() + '$');
+                $('#EUR').html(($price / data.Valute.EUR.Value).toFixed() + '€');
+                $('#UAH').html(($price /(data.Valute.UAH.Value / data.Valute.UAH.Nominal)).toFixed() + '₴');
+        }))
+    });
+    
+</script> -->
